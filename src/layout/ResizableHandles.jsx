@@ -2,6 +2,8 @@ import React from "react";
 import RGL, { WidthProvider } from "react-grid-layout";
 import "./ResizableHandles.css";
 import Div_1 from "../components/div_1/Div1";
+import Div_2 from "../components/div_2/Div2";
+import Div_3 from "../components/div_3/Div3";
 
 const ReactGridLayout = WidthProvider(RGL);
 
@@ -132,14 +134,17 @@ export default class ResizableHandles extends React.PureComponent {
         onResizeStop={this.onResizeStop}
         draggableHandle=".draggable-handle"
       >
+        
         <div key="0" className="div_1 draggable-handle">
           <Div_1 />
         </div>
+
         <div key="1" className="div_2 draggable-handle">
-          <span>Content for Div 2</span>
+          <Div_1 />
         </div>
+        
         <div key="2" className="div-3 draggable-handle">
-          <span>Content for Div 3</span>
+          <Div_1 />
         </div>
       </ReactGridLayout>
     );
